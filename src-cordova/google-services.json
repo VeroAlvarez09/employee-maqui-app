@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "323285151725",
+    "firebase_url": "https://ikiero.firebaseio.com",
+    "project_id": "ikiero",
+    "storage_bucket": "ikiero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323285151725:android:56ea2d77fc0504b35541e4",
+        "android_client_info": {
+          "package_name": "domis.ikiero.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323285151725-fcl6fb7bi97e481tr64gvutfdbo5cvd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBropYCfXX09O7krQzDOdJ3y-jnpHFeYTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323285151725-fcl6fb7bi97e481tr64gvutfdbo5cvd3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "323285151725-g4pd4u416geia93cpi6aft7tvbaa2qgk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ikiero.com"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323285151725:android:821afc5b135b0a235541e4",
+        "android_client_info": {
+          "package_name": "ikiero.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323285151725-o9ti8logl9cfdjg5kq9d9omc68v60086.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ikiero.com",
+            "certificate_hash": "b4b86ee350f601bcca7eaf5589aed89e80851c7d"
+          }
+        },
+        {
+          "client_id": "323285151725-fcl6fb7bi97e481tr64gvutfdbo5cvd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBropYCfXX09O7krQzDOdJ3y-jnpHFeYTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323285151725-fcl6fb7bi97e481tr64gvutfdbo5cvd3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "323285151725-g4pd4u416geia93cpi6aft7tvbaa2qgk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ikiero.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

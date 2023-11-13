@@ -1,0 +1,39 @@
+{
+  "name": "app-maqui-operator",
+  "version": "0.0.1",
+  "description": "Aplication for manage operator maqui",
+  "productName": "iKieroDomis App",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "Juan Felipe Mesa Ocampo",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "docker": "docker-compose -f docker-compose.dev.yml up --build",
+    "dev-pwa": "npm rebuild node-sass && quasar dev -m pwa",
+    "build-pwa": "quasar build --mode pwa"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "@sentry/tracing": "^6.2.5",
+    "@sentry/vue": "^6.2.5",
+    "adonis-vue-websocket": "^2.0.2",
+    "aws-s3": "^2.0.5",
+    "axios": "^0.18.1",
+    "compressorjs": "^1.0.7",
+    "quasar": "^1.0.0",
+    "vue2-google-maps": "^0.10.7"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "@quasar/quasar-app-extension-dotenv": "^1.0.1"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}

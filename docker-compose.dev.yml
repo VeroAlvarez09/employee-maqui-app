@@ -1,0 +1,13 @@
+version: "3"
+services:
+  domis-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    image: domis-app:latest
+    container_name: domis-app
+    ports:
+      - "8083:8083"
+    volumes:
+      - .:/app
+    command: /bin/sh -c "npm i && npm run dev-pwa"
