@@ -13,28 +13,26 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-
-        <div>
-          <q-btn flat round dense>
-            <q-menu>
-              <q-list style="min-width: 100px">
-                <q-item clickable v-close-popup>
-                  <q-item-section @click="profile"
-                  >Empleado id: {{ this.$store.state.user.id }}
-                  </q-item-section>
-                </q-item>
-                <q-item clickable v-close-popup>
-                  <q-item-section @click="profile">Mi perfil</q-item-section>
-                </q-item>
-                <q-item clickable v-close-popup>
-                  <q-item-section @click="logout"
-                  >Cerrar session
-                  </q-item-section>
-                </q-item>
-              </q-list>
-            </q-menu>
-          </q-btn>
-        </div>
+        <strong class="caption ft text-center text-secondary absolute-center text-h4">Maqui App</strong>
+        <q-btn flat round dense icon="perm_identity" class="absolute-right">
+          <q-menu>
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup>
+                <q-item-section @click="profile"
+                >Empleado id: {{ this.$store.state.user.id }}
+                </q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup>
+                <q-item-section @click="profile">Mi perfil</q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup>
+                <q-item-section @click="logout"
+                >Cerrar session
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
       </q-toolbar>
       <q-chip push color="secondary" text-color="white" class="ft">
         {{

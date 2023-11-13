@@ -2,7 +2,7 @@
   <q-page>
     <div class="q-pa-xs-xs">
       <div class="row">
-        <div class="q-pl-sm q-mt-xs" v-if="data && data.length > 0">
+        <div class="col-12 q-pl-sm q-mt-xs" v-if="data && data.length > 0">
           <strong class="ft text-grey-7">Horas registradas</strong>
         </div>
         <div
@@ -18,7 +18,7 @@
         </div>
         <!-- PEDIDOS -->
         <div
-          class="col-12 col-md-12 q-pa-xs q-pt-sm"
+          class="col-12 col-md-6 q-pa-xs q-pt-sm"
           v-for="(order, key) in data"
           :key="key"
         >
