@@ -74,9 +74,7 @@
       <q-page class="flex-center bg-grey-2">
         <q-page>
           <div class="q-pa-md">
-            <div class="row">
               <router-view/>
-            </div>
           </div>
         </q-page>
       </q-page>
@@ -103,8 +101,8 @@
 
         <q-tab
           name="index"
-          icon="dashboard"
-          label="Inicio"
+          icon="timer"
+          label="Registrar horas"
           @click="$router.push('/pending')"
         />
         <q-tab
@@ -166,7 +164,7 @@ export default {
           link: "/pending"
         },
         {
-          title: "Mi horas",
+          title: "Mis horas",
           icon: "event",
           link: "/progress"
         }

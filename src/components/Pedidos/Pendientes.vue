@@ -136,6 +136,7 @@ export default {
           this.showLoading("Registrando horas...");
           ServiceApi.post("/hours", this.data)
             .then(() => {
+              this.Noty("success", "Registro de horas exitoso, podras visualizar las horas registras en Mis Horas.");
               this.$router.push({path: "/progress"});
               this.hideLoading();
             })

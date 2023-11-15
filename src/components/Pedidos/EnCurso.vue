@@ -18,7 +18,7 @@
         </div>
         <!-- PEDIDOS -->
         <div
-          class="col-12 col-md-6 q-pa-xs q-pt-sm"
+          class="col-12 col-md-2 q-pa-xs q-pt-sm"
           v-for="(order, key) in data"
           :key="key"
         >

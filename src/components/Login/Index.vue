@@ -53,17 +53,6 @@
 
       <!--                 Recuperar contraseña                  -->
       <q-card flat bordered class="my-card q-pt-lg" v-if="step === 3">
-        <q-card-section>
-          <q-avatar
-            style="z-index: 1"
-            size="103px"
-            class="absolute-center shadow-19"
-          >
-            <img
-              src="https://ikiero.s3.amazonaws.com/Recursos+ikiero/Domis/512x512.png"
-            />
-          </q-avatar>
-        </q-card-section>
         <q-card-section class="q-pt-xl">
           <div class="ft text-h6 row items-center justify-evenly">
             Recuperar contraseña.
