@@ -1,7 +1,6 @@
 import MainLayout from "layouts/MainLayout";
 import PageIndex from "../pages/Index";
 import Pending from "../pages/EnCurso";
-import OrderDetail from "../pages/OrderDetail";
 import Login from "../pages/Login";
 import Register from "../components/Login/Register";
 import PageProfile from "pages/PageProfile";
@@ -48,11 +47,6 @@ const routes = [
         path: "/order",
         name: "order",
         component: ModalOrder
-      },
-      {
-        path: "/order/detail/:id",
-        name: "detail-order",
-        component: OrderDetail
       },
       {
         path: "/profile",

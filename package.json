@@ -2,7 +2,7 @@
   "name": "app-maqui-operator",
   "version": "0.0.1",
   "description": "Aplication for manage operator maqui",
-  "productName": "iKieroDomis App",
+  "productName": "Maqui App",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Juan Felipe Mesa Ocampo",

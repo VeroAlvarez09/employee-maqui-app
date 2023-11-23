@@ -1,6 +1,4 @@
 import Moment from "moment";
-import S3 from "aws-s3";
-import Compressor from "compressorjs";
 
 export const Loading = {
   methods: {
@@ -22,11 +20,6 @@ export const Noty = {
         color: "white",
         position: "center",
         message: `<div style="background-color: white;" class="items-center justify-center column text-center">
-        <img
-          style="height:50px"
-          src="https://ikiero.s3.amazonaws.com/Recursos+ikiero/icons/${icon}.png"
-          alt
-        />
         <div class="full-width text-center text-grey-7">
           <div class="text-h6 text-bold ft">${title}</div>
         </div>
@@ -113,121 +106,6 @@ export const Filters = {
         return now.diff(before, "minutes");
       }
       return "";
-    }
-  }
-};
-
-export const Scroll = {
-  methods: {
-    toId(id) {
-      var element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView(true);
-        window.scrollBy(0, -30);
-      }
-    }
-  }
-};
-
-export const Utils = {
-  methods: {
-    getKm(lat1, lon1, lat2, lon2) {
-      const rad = x => {
-        return (x * Math.PI) / 180;
-      };
-      let R = 6378.137; //Radio de la tierra en km
-      let dLat = rad(lat2 - lat1);
-      let dLong = rad(lon2 - lon1);
-      let a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(rad(lat1)) *
-          Math.cos(rad(lat2)) *
-          Math.sin(dLong / 2) *
-          Math.sin(dLong / 2);
-      let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      let d = R * c;
-      return d.toFixed(2); //Retorna tres decimales
-    },
-    isNumero(val) {
-      if (!isNaN(val)) {
-        return false;
-      }
-      return true;
-    }
-  }
-};
-
-export const AmazonS3 = {
-  data() {
-    return {
-      config: {
-        bucketName: process.env.VUE_APP_BUCKET_NAME,
-        dirName: process.env.VUE_APP_DIR_NAME,
-        region: process.env.VUE_APP_REGION,
-        accessKeyId: process.env.VUE_APP_ACCESS_KEY_ID,
-        secretAccessKey: process.env.VUE_APP_SECRET_ACCESS_KEY,
-        s3Url: process.env.VUE_APP_S3_URL
-      }
-    };
-  },
-  methods: {
-    uploadFile(file, fileName, dir) {
-      return new Promise((resolve, reject) => {
-        this.comprimirArchivo(file)
-          .then(result => {
-            this.config.dirName = this.isTesting()
-              ? "Pruebas/" + dir
-              : "Produccion/" + dir;
-            const S3Client = new S3(this.config);
-            S3Client.uploadFile(result, fileName)
-              .then(data => {
-                resolve(data.location);
-              })
-              .catch(err => {
-                reject(err);
-              });
-          })
-          .catch(e => reject(e));
-      });
-    },
-    uploadFileArchivo(file, fileName, dir) {
-      return new Promise((resolve, reject) => {
-        this.config.dirName = this.isTesting()
-          ? "Pruebas/" + dir
-          : "Produccion/" + dir;
-        const S3Client = new S3(this.config);
-        const newFileName = fileName;
-        S3Client.uploadFile(file, newFileName)
-          .then(data => {
-            resolve(data.location);
-          })
-          .catch(err => reject(err));
-      });
-    },
-    isTesting() {
-      if (window.location.hostname === "domis.ikiero.com") {
-        return false;
-      } else {
-        return true;
-      }
-    },
-    comprimirArchivo(file) {
-      return new Promise((resolve, reject) => {
-        new Compressor(file, {
-          quality: 0.6,
-          maxWidth: 1920,
-          maxHeight: 1280,
-          minWidth: 350,
-          minHeight: 350,
-          convertSize: 2000000,
-          success(result) {
-            resolve(result);
-          },
-          error(err) {
-            reject(err);
-          }
-        });
-      });
     }
   }
 };

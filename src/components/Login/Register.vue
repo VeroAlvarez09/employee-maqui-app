@@ -119,7 +119,7 @@
                   <template v-slot:control>
                     <q-checkbox
                       v-model="politics"
-                      label="Autorizo de manera voluntaria, expresa e informada a iKiero S.A.S para el tratamientos de datos personales"
+                      label="Autorizo de manera voluntaria, expresa e informada a Maqui App S.A.S para el tratamientos de datos personales"
                       color="primary"
                     />
                   </template>

@@ -1,6 +1,6 @@
-# Domis iKiero App (app-ikiero-domis)
+# Maqui App (app-maqui-employee)
 
-Aplication for manage domis iKiero
+Aplication for operators MaquiApp
 
 ## Install the dependencies
 ```bash
